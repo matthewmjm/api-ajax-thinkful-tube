@@ -29,16 +29,16 @@ $(document).ready(function () {
 
     //    STEP 3:  Using the JSON response (videos), populate the HTML with the variable inside the JSON
     function displayYOUTUBESearchData(data) {
-        var resultElement = '';
+        var buildHTML = "";
         $.each(data, function (dataKey, dataValue) {
-            displayYOUTUBESearchData += "<li>";
-            displayYOUTUBESearchData += "<p>" + dataValue.snippet.title + "</p>";
-            displayYOUTUBESearchData += "<a href='https://www.youtube.com/watch?v=" + dataValue.id.videoId + "' target='_blank'>";
-            displayYOUTUBESearchData += "<img src='" + dataValue.snippet.thumbnails.high.url + "'/>";
-            displayYOUTUBESearchData += "</a>";
-            displayYOUTUBESearchData += "</li>";
+            buildHTML += "<li>";
+            buildHTML += "<p>" + dataValue.snippet.title + "</p>";
+            buildHTML += "<a href='https://www.youtube.com/watch?v=" + dataValue.id.videoId + "' target='_blank'>";
+            buildHTML += "<img src='" + dataValue.snippet.thumbnails.high.url + "'/>";
+            buildHTML += "</a>";
+            buildHTML += "</li>";
         });
 
-        $('.js-search-results ul').html(displayYOUTUBESearchData);
+        $(".js-search-results ul").html(buildHTML);
     }
 });
