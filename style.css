@@ -1,0 +1,56 @@
+/*CSS reset*/
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 50px;
+}
+
+html {
+    background: rgba(0, 0, 0, 0) url("../images/blue-sky.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.title {
+    color: floralwhite;
+    font-size: 3em;
+    text-align: center;
+}
+
+form.js-search-form {
+    text-align: center;
+}
+
+input.js-query {
+    width: 400px;
+}
+
+button {
+    cursor: pointer;
+    border: 2px solid darkblue;
+    color: darkblue;
+    background-color: lightgrey;
+}
+
+button:hover {
+    background-color: darkblue;
+    color: lightgray;
+}
