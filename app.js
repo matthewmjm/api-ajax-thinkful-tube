@@ -6,6 +6,7 @@ $(document).ready(function () {
         event.preventDefault();
         var query = $(this).find('.js-query').val();
         getDataFromApi(query);
+        $('.js-search-form').trigger("reset");
     });
 
     //    STEP 2:  Using input from user, make API call to get the JSON response
@@ -18,7 +19,7 @@ $(document).ready(function () {
                 type: "video"
             },
             function (receivedApiData) {
-                if (receivedApiData.pageInfo.totalResults == 0) {
+                if (receivedApiData.pageInfo.totalResults === 0) {
                     resultElement += '<p>No videos found</p>';
                 } else {
                     displayYOUTUBESearchData(receivedApiData.items);
@@ -38,6 +39,6 @@ $(document).ready(function () {
             displayYOUTUBESearchData += "</li>";
         });
 
-        $('.js-search-results').html(displayYOUTUBESearchData);
+        $('.js-search-results ul').html(displayYOUTUBESearchData);
     }
 });
